@@ -32,20 +32,28 @@
 // 		console.log(checkPalindrome("Borscht"));
 // 		=> false
 
-let str = "Radar"
-
-console.log(str[0]);
+let str = "radAR"
+let str2 = "happy"
 
  function checkPalindrome(str){
  	for (let i = 0; i < (str.length/2); i++){
  		if (str[i] !== str[str.length-1-i] && 
  			str[i] !== str[str.length-1-i].toUpperCase() && 
- 			str[i] !== str[str.length-1-i].toLowerCase){
+ 			str[i] !== str[str.length-1-i].toLowerCase()){
  			return false;
  		} 
  	}
  	return true;
 }
-
 console.log(checkPalindrome(str));
+console.log(checkPalindrome(str2));
+
+//	3. Digit Sum
+//	Write a function sumDigits that accepts a number and returns the sum
+//  of its digits.
+
+//	console.log(sumDigits(42));
+//	=> 6;
+
+
 // }
