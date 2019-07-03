@@ -67,4 +67,19 @@ function sumDigits(num){
 }
 
 console.log(sumDigits(345));
-// }
+
+// 4. Pythagoras
+// 	Write a function calculateSide that takes two arguments: sideA and
+// 	sideB, and returns the solution for sideC using the Pythagorean 
+//	theorem.
+//	hint: discover the Pythagorean Theorem on a website called google.com
+//	hint: checkout the Math methods in javascript
+//	ex :console.log(calculateSide(8, 6)); => 10
+
+// **calculateHypotenuse is a much more descriptive name than calculateSide.
+function calculateHypotenuse(a,b){
+	let hypotSqr = Math.pow(a,2) + Math.pow(b,2);
+	console.log(Math.sqrt(hypotSqr));
+};
+
+calculateHypotenuse(3,4);
