@@ -55,5 +55,16 @@ console.log(checkPalindrome(str2));
 //	console.log(sumDigits(42));
 //	=> 6;
 
+function sumDigits(num){
+	let numStr = num.toString();
+	let numStrArray = numStr.split("");
+	let numArray = numStrArray.map(Number);
+	let answer = 0
+	for (let i = 0; i < numArray.length; i++){
+		answer += numArray[i]
+	}
+	return answer;
+}
 
+console.log(sumDigits(345));
 // }
