@@ -83,3 +83,62 @@ function calculateHypotenuse(a,b){
 };
 
 calculateHypotenuse(3,4);
+
+// 5. Sum Array
+// 	Write a function sumArray that takes an array as an argument. 
+// 	The array should contain numbers. The function should return 
+//	the sum of the numbers in the array.
+// 	Expected result:
+//	console.log(sumArray([1, 2, 3, 4, 5, 6])); => 21
+
+let array = [4, 1, -3];
+
+function sumArray(array){
+	let sum = 0
+	for(let i = 0; i < array.length; i++){
+		sum += array[i];
+	};
+	return sum
+}
+
+console.log(sumArray(array));
+
+// 6. Prime Numbers
+//	Step One
+//	Write a function called checkPrime that will test whether a 
+//	number is Prime. The function will return true (Boolean) if Prime, 
+//	false if not. Hint: Check every number up to the square root. To 
+//	do this, try a for loop.
+
+function checkPrime(num){
+	for(let i = 2; i < num; i++){
+		if(num % i === 0){
+			return false
+		} 
+	}
+	return true;
+}
+
+console.log(checkPrime(5));
+console.log(checkPrime(28));
+
+//	Step Two
+//	Write another function called printPrimes that will print 
+//	(console log) all the Primes up to an arbitrary limit. For example, 
+//	if you invoke your function with printPrimes(97), it will print all 
+//	the Prime numbers up to and including 97. This function can call on 
+//	the previous checkPrime function.
+
+function printPrimes(num){
+	let allPrimes = [];
+	for(let i = 1; i <= num; i++){
+		if (checkPrime(i) === true){
+			allPrimes.push(i);
+		}
+	}
+	return console.log(allPrimes); 
+}
+
+printPrimes(97);
+
+
